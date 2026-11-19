@@ -18,6 +18,7 @@ The categories are just to make it easier for you to find the plugins you're loo
     - [Citizens](./NPCs/Citizens.md)
     - [FancyNpcs](./NPCs/FancyNpcs.md)
     - [MythicMobs](./NPCs/MythicMobs.md)
+    - [NpcPlugin](./NPCs/NpcPlugin.md)
     - [ZNPCsPlus](./NPCs/ZNPCsPlus.md)
     
  -   [Items](Items/index.md)

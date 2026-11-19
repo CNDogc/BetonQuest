@@ -163,6 +163,7 @@ hook:
   train_carts: true
   fancynpcs: true
   znpcsplus: true
+  npcplugin-paper: true
   craftengine: true
   itemsadder: true
   nexo: true

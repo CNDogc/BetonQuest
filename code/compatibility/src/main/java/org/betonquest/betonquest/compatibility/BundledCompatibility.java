@@ -29,6 +29,7 @@ import org.betonquest.betonquest.compatibility.mythicmobs.MythicMobsIntegrator;
 import org.betonquest.betonquest.compatibility.nexo.NexoIntegrator;
 import org.betonquest.betonquest.compatibility.npc.citizens.CitizensIntegrator;
 import org.betonquest.betonquest.compatibility.npc.fancynpcs.FancyNpcsIntegrator;
+import org.betonquest.betonquest.compatibility.npc.npcplugin.NpcPluginIntegrator;
 import org.betonquest.betonquest.compatibility.npc.znpcsplus.ZNPCsPlusIntegrator;
 import org.betonquest.betonquest.compatibility.packetevents.PacketEventsIntegrator;
 import org.betonquest.betonquest.compatibility.placeholderapi.PlaceholderAPIIntegrator;
@@ -163,6 +164,7 @@ public final class BundledCompatibility {
         register(FancyNpcsIntegrator.PREFIX, () -> new FancyNpcsIntegrator(plugin), FancyNpcsIntegrator.getPolicies());
         register(FancyHologramsIntegrator.NAME, () -> new FancyHologramsIntegrator(), FancyHologramsIntegrator.getPolicies());
         register(ZNPCsPlusIntegrator.PREFIX, () -> new ZNPCsPlusIntegrator(), ZNPCsPlusIntegrator.REQUIRED_VERSION);
+        register(NpcPluginIntegrator.PLUGIN_NAME, () -> new NpcPluginIntegrator(), NpcPluginIntegrator.getPolicies());
         register("Nexo", () -> new NexoIntegrator(), NexoIntegrator.REQUIRED_VERSION);
         register("CraftEngine", () -> new CraftEngineIntegrator(), CraftEngineIntegrator.REQUIRED_VERSION);
         register("ItemsAdder", () -> new ItemsAdderIntegrator(), ItemsAdderIntegrator.REQUIRED_VERSION);

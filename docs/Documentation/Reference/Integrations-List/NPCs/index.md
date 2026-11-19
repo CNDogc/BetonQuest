@@ -17,6 +17,7 @@ BetonQuest provides integrations for the following NPC plugins:
 - [Citizens](Citizens.md)
 - [MythicMobs](MythicMobs.md)
 - [FancyNpcs](FancyNpcs.md)
+- [NpcPlugin](NpcPlugin.md)
 - [ZNPCsPlus](ZNPCsPlus.md)
 
 ## Referring an NPC
@@ -87,6 +88,16 @@ You would then use the `betonQuestNPCID` for all NPC references within BetonQues
         Use `ZNPCsPlus` for the NPC selector argument.
         To acquire the NPCs ID, use the `/npc near 5` command and copy the `ID` from the NPC info.
 
+    === "NpcPlugin"
+        ```YAML title="Example NPCs section"
+        npcs:
+          bernhard: NpcPlugin 6f1d8a3c-0e42-4b71-8d95-2c7a5e9b1d34
+          guard: NpcPlugin 2b8c4e6a-9d13-47f0-b352-8e61a4c7d902
+        ```
+        
+        Use `NpcPlugin` for the NPC selector argument.
+        To acquire the NPCs ID, use the `/npc list` command and copy the `UUID` from the NPC info.
+
 !!! warning "Multiple NPCs from one identifier"
     If there is more than one NPC valid for an identifier (such as when using Citizens `byName` option),
     actions like `npcteleport` will teleport all NPCs and objectives like `npcrange` will complete if any NPC meets the
@@ -150,6 +161,18 @@ It allows you to assign conditions to specific BQ NPCIDs like so:
     ```YAML title="NPC Hider Example"
     npcs:
       innkeeper: ZNPCsPlus innkeeper
+    conditions:
+      hidden: tag innkeeperIsTired
+    hide_npcs:
+      innkeeper: hidden
+    ```
+=== "NpcPlugin"
+    !!! tip inline end "Explanation"
+        The NPC `inkeeper` (which is the BetonQuestNPCID and **not** the NPCID itself) will be hidden if the player has the 
+        tag `inkeeperIsTired`.
+    ```YAML title="NPC Hider Example"
+    npcs:
+      innkeeper: NpcPlugin 6f1d8a3c-0e42-4b71-8d95-2c7a5e9b1d34
     conditions:
       hidden: tag innkeeperIsTired
     hide_npcs:

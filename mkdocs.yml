@@ -141,6 +141,7 @@ nav:
                   - 'Citizens': Documentation/Reference/Integrations-List/NPCs/Citizens.md
                   - 'FancyNpcs': Documentation/Reference/Integrations-List/NPCs/FancyNpcs.md
                   - 'MythicMobs': Documentation/Reference/Integrations-List/NPCs/MythicMobs.md
+                  - 'NpcPlugin': Documentation/Reference/Integrations-List/NPCs/NpcPlugin.md
                   - 'ZNPCsPlus': Documentation/Reference/Integrations-List/NPCs/ZNPCsPlus.md
               - 'Items':
                   - 'Documentation/Reference/Integrations-List/Items/index.md'
